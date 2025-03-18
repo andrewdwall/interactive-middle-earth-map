@@ -9,16 +9,15 @@ An interactive web project that allows users to explore Middle-earth. This proje
 - ✅ Map image added to page.
 - ✅ Text overlay image added.
 - ✅ Test location marker added using `<div>` method for initial placement and sizing.
-- ✅ Updated code to use flexbox and relative units (px changed to vw) for Responsive Web Design (RWD) to adapt to all screen sizes.
+- ✅ Updated code to use flexbox and relative units for Responsive Web Design (RWD).
 - ✅ Designed and added border to map.
+- ✅ Created dynamic location markers using JavaScript array.
+- ✅ Added animation, hover and click effects to markers in CSS.
 
 ## 🚧 Future Development:
 - **Refine site formatting and design**
-- **Create dynamic location markers using JavaScript arrays**
-- **Add marker animation**
-- **Add hover and cursor effects to markers**
-- **Add click, tooltip and modal functionality to markers**
-- **Design and add images and lore text for tooltip and modal elements**
+- **Add click, tooltip / modal functionality to markers**
+- **Design and add images and lore text for tooltip / modal elements**
 - **Implement zoom and pan functionality to map using Leaflet.js**
 - **Expand map with additional locations**
 
