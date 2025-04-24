@@ -1,125 +1,163 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 @font-face {
-    font-family: 'aniron-bold';
-    src: url(../assets/fonts/aniron-bold.ttf);
+  font-family: "aniron-bold";
+  src: url(../assets/fonts/aniron-bold.ttf);
 }
 
 @font-face {
-    font-family: 'tengwar-annatar-bold-italic';
-    src: url(../assets/fonts/tengwar-annatar-bold-italic.ttf);
+  font-family: "tengwar-annatar-bold-italic";
+  src: url(../assets/fonts/tengwar-annatar-bold-italic.ttf);
 }
 
 /* Banner styling */
 .banner {
-    width: 100%;
-    height: 45vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    font-family: 'tengwar-annatar-bold-italic';
-    color: #000000;
-    font-size: 4vw;
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  font-family: "tengwar-annatar-bold-italic";
+  color: #000000;
+  font-size: 4vw;
 }
 
 /* Style translated banner text */
 .banner-text-translate {
-    font-family: 'aniron-bold';
-    color: #000000;
-    font-size: 1.5vw;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: center;
-    position: absolute;
-    top: 5.5vw;
-    left: 36.9vw;
+  font-family: "aniron-bold";
+  color: #000000;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 5.5vw;
+  left: 36.9vw;
 }
 
 /* Map styling */
 .map-container {
-    width: 95%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    border: 5vw;
-    margin: 5vw auto;
-    margin-top: 5vw;
-    z-index: 2;
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border: 5vw;
+  margin: 5vw auto;
+  margin-top: 5vw;
+  z-index: 2;
 }
 
 .map {
-    width: 100%;
-    height: auto;
-    cursor: grab;
-    z-index: 3;
+  width: 100%;
+  height: auto;
+  cursor: grab;
+  z-index: 3;
 }
 
 /* Map border */
 .map-border-container {
-    width: 95%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    transform: translate(0%, -107.5%);
-    margin: 5vw auto;
-    margin-top: 5vw;
-    z-index: 1;
+  width: 95%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  transform: translate(0%, -107.5%);
+  margin: 5vw auto;
+  margin-top: 5vw;
+  z-index: 1;
 }
 
 .map-border {
-    width: 100%;
-    height: auto;
-    pointer-events: none;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
 }
 
 .map-text-overlay {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    pointer-events: none;
-    z-index: 4;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
 }
 
 /* Create location marker rotation animation */
 @keyframes rotateMarker {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Location marker styling */
 .marker {
-    width: 3.64%;
-    height: 5.15%;
-    position: absolute;
-    cursor: pointer;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 3;
-    animation: rotateMarker 20s linear infinite; /* Apply rotation animation */
+  width: 3.64%;
+  height: 5.15%;
+  position: absolute;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
+  animation: rotateMarker 20s linear infinite; /* Apply rotation animation */
 }
 
 /* Hover Effect */
 .marker:hover {
-    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8)); /* Add glow effect on hover */
+  filter: drop-shadow(
+    0px 0px 5px rgba(255, 255, 255, 0.8)
+  ); /* Add glow effect on hover */
 }
 
 /* Click Effect*/
 .marker:active {
-    animation: hoverScale 0.05s ease-in-out;
-    transform: scale(1.3); /* Enlarge marker on click */
+  animation: hoverScale 0.05s ease-in-out;
+  transform: scale(1.3); /* Enlarge marker on click */
+}
+
+/* Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #111;
+  padding: 2vw;
+  border-radius: 1vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 80%;
+  height: 80%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
 }

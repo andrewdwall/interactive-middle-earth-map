@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Middle-earth</title>
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
     <!-- Create banner -->
     <header class="banner">
-        <!-- Banner text overlay -->
-        <div class="banner-text">Middle-earth</div>
-            <div class="banner-text-translate">Middle-earth</div>
+      <!-- Banner text overlay -->
+      <div class="banner-text">Middle-earth</div>
+      <div class="banner-text-translate">Middle-earth</div>
     </header>
     <!-- Base map -->
     <div class="map-container">
-        <img src="../assets/middle-earth-map.png" alt="Middle-earth Map" class="map">
-        <!-- Overlay map text -->
-        <img src="assets/middle-earth-map-text.png" class="map-text-overlay">
+      <img
+        src="../assets/middle-earth-map.png"
+        alt="Middle-earth Map"
+        class="map"
+      />
+      <!-- Overlay map text -->
+      <img src="assets/middle-earth-map-text.png" class="map-text-overlay" />
     </div>
     <!-- Map border -->
     <div class="map-border-container">
-        <img src="../assets/middle-earth-map-border.png" alt="Middle-earth Map Border" class="map-border">
+      <img
+        src="../assets/middle-earth-map-border.png"
+        alt="Middle-earth Map Border"
+        class="map-border"
+      />
     </div>
-    <div style="height: 600px;"></div> <!-- Empty div to test scroll -->
+    <div style="height: 600px"></div>
+    <!-- Empty div to test scroll -->
     <style>
-        body {
-            background-image: url('../assets/background.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-        }
+      body {
+        background-image: url("../assets/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+      }
     </style>
-<script src="../js/script.js"></script>
-</body>
+
+    <!-- Location modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Location Title</h2>
+        <img id="modal-location-image" src="" alt="Location Image" />
+        <p id="modal-description">Location description</p>
+      </div>
+    </div>
+
+    <!-- Link JS-->
+    <script src="../js/script.js"></script>
+  </body>
 </html>
